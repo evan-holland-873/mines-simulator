@@ -45,4 +45,4 @@ class Board:
             
             revealed_tiles.append(tile_pick)
 
-        return total_balance + self.calculate_payout(tiles, mines_count) * bet_amount
+        return total_balance + self.calculate_payout(tiles, mines_count) * bet_amount - bet_amount
