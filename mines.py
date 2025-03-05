@@ -2,7 +2,7 @@ from random import randint
 from scipy.special import binom
 
 class Board:
-    def __init__(self, width: int, height: int, multiplier_rule = 0.97):
+    def __init__(self, width = 5, height = 5, multiplier_rule = 0.97):
         self.width = width
         self.height = height
 
