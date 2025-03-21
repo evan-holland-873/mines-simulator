@@ -2,12 +2,12 @@ from random import randint
 from scipy.special import binom
 
 class Board:
-    def __init__(self, width = 5, height = 5, multiplier_rule = 0.97):
+    def __init__(self, width = 5, height = 5, multiplier_rule = 0.97, max_win = 10_000):
         self.width = width
         self.height = height
 
         self.multiplier = multiplier_rule
-        
+        self.max_win = max_win
         self.tiles = width * height
 
     def random_tile(self) -> tuple:
@@ -45,4 +45,4 @@ class Board:
             
             revealed_tiles.append(tile_pick)
 
-        return total_balance + self.calculate_payout(tiles, mines_count) * bet_amount - bet_amount
+        return total_balance + min(self.calculate_payout(tiles, mines_count) * bet_amount - bet_amount, self.max_win)
