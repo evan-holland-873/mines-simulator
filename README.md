@@ -5,7 +5,7 @@ The Board class aims to accurately simulate a mines game board, and is based on 
 # Parameters:
 `def __init__(self, width  =  5, height  =  5, multiplier_rule  =  0.97)`
 
-`width` and `length`: Dimensions of the board, typically 5x5
+`width` and `height`: Dimensions of the board, typically 5x5
 `multiplier_rule`: Constant that winnings are multiplied by as a house advantage. SPRIBE pays 97% of winnings that are calculated as follows:
 
 $`P(n, m, k, t)= k \frac{\binom{t}{n}}{\binom{t-m}{n}}`$
